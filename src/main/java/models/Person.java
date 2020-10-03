@@ -9,11 +9,32 @@ public class Person {
      * The Name.
      */
     protected String name;
-    final private String lastName;
-    private String maidenName;
-    private int height;
-    private int weight;
-    private int depth;
+    /**
+     * The Last name.
+     */
+    protected String lastName;
+    /**
+     * The Maiden name.
+     */
+    protected String maidenName;
+    /**
+     * The Height.
+     */
+    protected int height;
+    /**
+     * The Weight.
+     */
+    protected int weight;
+    /**
+     * The Depth.
+     */
+    protected int depth;
+
+    /**
+     * Instantiates a new Person.
+     */
+    public Person() {
+    }
 
     /**
      * Instantiates a new Person.
@@ -44,53 +65,60 @@ public class Person {
     /**
      * Give me your name.
      */
-    public void giveMeYourName(){ System.out.println("Su nombre es: " + this.name); }
+    protected void giveMeYourName(){ System.out.println("Su nombre es: " + this.name); }
 
     /**
      * Give me your last name.
      */
-    public void giveMeYourLastName(){ System.out.println("Su apellido paterno es: " + this.lastName); }
+    protected void giveMeYourLastName(){ System.out.println("Su apellido paterno es: " + this.lastName); }
 
     /**
      * Give me your maiden name.
      */
-    public void giveMeYourMaidenName(){ System.out.println("Su apellido materno es: " + this.maidenName); }
+    protected void giveMeYourMaidenName(){ System.out.println("Su apellido materno es: " + this.maidenName); }
 
     /**
      * Give me your height.
      */
-    public void giveMeYourHeight(){ System.out.println("Su altura es: " + this.height + " cm."); }
+    protected void giveMeYourHeight(){ System.out.println("Su altura es: " + this.height + " cm."); }
 
     /**
      * Give me your weight.
      */
-    public void giveMeYourWeight(){ System.out.println("Su peso es: " + this.weight + " Kg."); }
+    protected void giveMeYourWeight(){ System.out.println("Su peso es: " + this.weight + " Kg."); }
 
     /**
      * Give me your depth.
      */
-    public void giveMeYourDepth(){ System.out.println("Su profundidad que tiene es de: " + this.depth + " cm."); }
+    protected void giveMeYourDepth(){ System.out.println("Su profundidad que tiene es de: " + this.depth + " cm."); }
 
     /**
      * Eating.
      */
-    public void eating(){
+    protected void eating(){
         System.out.println( this.name + " está comiendo.");
     }
 
     /**
      * Speaking.
      */
-    public void speaking(){
+    protected void speaking(){
         System.out.println( this.name + " está hablando.");
     }
 
     /**
-     * Get name string.
+     * Gets name.
      *
-     * @return the string
+     * @return the name
      */
-    public String getName(){
-        return this.name;
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Salute.
+     */
+    public void salute(){
+        System.out.println("Soy persona y mi nombre es: " + this.name + " " + this.lastName);
     }
 }
