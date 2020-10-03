@@ -1,20 +1,25 @@
-import models.Person;
+import models.*;
+
+import javax.swing.*;
+import java.text.CollationKey;
 
 class Main {
 
     public static void main(String... args)
     {
-        Person person = new Person("Antonio","Aguirre","Rivera", 172, 70, 35);
+//        Person person = new Customer("Antonio","Aguirre","Rivera", 172, 70, 35);
+//        person.giveMeYourFullName();
 
-        person.giveMeYourFullName();
-        person.giveMeYourName();
-        person.giveMeYourLastName();
-        person.giveMeYourMaidenName();
-        person.giveMeYourHeight();
-        person.giveMeYourWeight();
-        person.giveMeYourDepth();
-        person.eating();
-        person.speaking();
 
+//        Person person = new Customer("Antonio","Aguirre","Rivera", 172, 70, 35);
+
+//        Athlete athlete = new Athlete();
+
+//        House house = new House();
+//        house.welcome(person);
+        PaymentGateway paymentGateway = new PaypalGateway();
+
+        ProcessCharge processCharge = new ProcessCharge();
+        processCharge.charge(paymentGateway);
     }
 }
