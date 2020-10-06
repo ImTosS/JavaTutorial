@@ -20,12 +20,6 @@ public class PaypalGateway extends PaymentGateway{
         this.authenticate(credentials.getUsername(), credentials.getPassword());
     }
 
-    /**
-     * Sets credentials.
-     *
-     * @param username the username
-     * @param password the password
-     */
     public void setCredentials(String username, String password)
     {
         this.authenticate(username, password);
