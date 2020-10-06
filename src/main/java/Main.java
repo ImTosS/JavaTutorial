@@ -1,6 +1,7 @@
 import models.*;
 
 import javax.swing.*;
+import java.security.cert.CRLReason;
 import java.text.CollationKey;
 
 class Main {
@@ -17,7 +18,10 @@ class Main {
 
 //        House house = new House();
 //        house.welcome(person);
-        PaymentGateway paymentGateway = new PaypalGateway();
+        PaypalGateway paymentGateway = new PaypalGateway();
+
+        Credentials credentials = new Credentials("oscar","secure-password");
+        paymentGateway.setCredentials(credentials);
 
         ProcessCharge processCharge = new ProcessCharge();
         processCharge.charge(paymentGateway);
