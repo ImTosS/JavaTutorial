@@ -10,6 +10,16 @@ public class PaypalGateway extends PaymentGateway{
         System.out.println("Se ha realizado el cargo con Paypal!");
     }
 
+    @Override
+    public void sendNotification() {
+        System.out.println("Notificacion enviada con Paypal");
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Imprimir desde Paypal");
+    }
+
     /**
      * Sets credentials.
      *

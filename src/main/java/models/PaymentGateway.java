@@ -1,8 +1,28 @@
 package models;
 
-public class PaymentGateway {
+import interfaces.Chargable;
+import interfaces.Notificable;
+import interfaces.Printable;
 
-    public void executeCharge(){
-        System.out.println("Cargo realizado!");
+public abstract class PaymentGateway implements Chargable, Notificable, Printable {
+
+    @Override
+    public void executeCharge() {
+
+    }
+
+    @Override
+    public void sendNotification() {
+
+    }
+
+    @Override
+    public void print() {
+
+    }
+
+    @Override
+    public void hello() {
+
     }
 }
