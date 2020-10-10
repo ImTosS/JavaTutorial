@@ -1,4 +1,4 @@
-package models;
+package com.tutorial.domain.models;
 
 public class Dog extends Animal{
 

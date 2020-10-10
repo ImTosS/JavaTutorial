@@ -1,4 +1,6 @@
-package models;
+package com.tutorial.infrastructure.gateways;
+
+import com.tutorial.domain.models.Credentials;
 
 /**
  * The type Paypal gateway.
@@ -8,16 +10,6 @@ public class PaypalGateway extends PaymentGateway{
     @Override
     public void executeCharge(){
         System.out.println("Se ha realizado el cargo con Paypal!");
-    }
-
-    @Override
-    public void sendNotification() {
-        System.out.println("Notificacion enviada con Paypal");
-    }
-
-    @Override
-    public void print() {
-        System.out.println("Imprimir desde Paypal");
     }
 
     /**

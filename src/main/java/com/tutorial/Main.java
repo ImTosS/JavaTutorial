@@ -1,5 +1,11 @@
-import interfaces.Printable;
-import models.*;
+package com.tutorial;
+
+import com.tutorial.application.charge.ChargeService;
+import com.tutorial.infrastructure.gateways.StripeGateway;
+import com.tutorial.infrastructure.notifications.EmailNotification;
+import com.tutorial.infrastructure.notifications.Notificable;
+import com.tutorial.infrastructure.printing.LocalPrinter;
+import com.tutorial.infrastructure.printing.Printable;
 
 class Main {
 
@@ -23,11 +29,5 @@ class Main {
 
         ChargeService chargeService = new ChargeService();
         chargeService.charge(stripeGateway);
-
-        NotificationService notificationService = new NotificationService();
-        notificationService.notificate(stripeGateway);
-
-        PrintService printService = new PrintService();
-        printService.printSomething(stripeGateway);
     }
 }
