@@ -1,7 +1,8 @@
 package com.tutorial;
 
 import com.tutorial.application.charge.ChargeService;
-import com.tutorial.infrastructure.gateways.StripeGateway;
+import com.tutorial.domain.models.Credentials;
+import com.tutorial.infrastructure.gateways.*;
 import com.tutorial.infrastructure.notifications.EmailNotification;
 import com.tutorial.infrastructure.notifications.Notificable;
 import com.tutorial.infrastructure.printing.LocalPrinter;
@@ -22,12 +23,12 @@ class Main {
 //        house.welcome(person);
 
 
-        StripeGateway stripeGateway = new StripeGateway();
+        PaymentGateway paymentGateway = new OpenPayGateway();
 
-//        Credentials credentials = new Credentials("oscar","secure-password");
-//        paymentGateway.setCredentials(credentials);
+        Credentials credentials = new Credentials("oscar","secure-password");
+        paymentGateway.setCredentials(credentials);
 
         ChargeService chargeService = new ChargeService();
-        chargeService.charge(stripeGateway);
+        chargeService.charge(paymentGateway);
     }
 }

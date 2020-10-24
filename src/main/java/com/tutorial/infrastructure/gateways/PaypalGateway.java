@@ -12,63 +12,62 @@ public class PaypalGateway extends PaymentGateway{
         System.out.println("Se ha realizado el cargo con Paypal!");
     }
 
-    /**
-     * Sets credentials.
-     *
-     * @param credentials the credentials
-     */
-    public void setCredentials(Credentials credentials)
-    {
-        this.authenticate(credentials.getUsername(), credentials.getPassword());
+    @Override
+    protected void beforeAuthenticating() {
+        System.out.println("Ejecutando antes de autenticar al usuario en Paypal");
     }
 
-    public void setCredentials(String username, String password)
-    {
-        this.authenticate(username, password);
+    @Override
+    protected void afterAuthenticating() {
+
     }
 
-    /**
-     * Sets credentials.
-     *
-     * @param username    the username
-     * @param password    the password
-     * @param environment the environment
-     */
-    public void setCredentials(String username, String password, String environment)
-    {
-        System.out.println("Implementacion con 3 parametros");
+    @Override
+    protected void afterSendingCredentials() {
+
     }
 
-    /**
-     * Sets credentials.
-     *
-     * @param username    the username
-     * @param password    the password
-     * @param environment the environment
-     * @param devEmail    the dev email
-     */
-    public void setCredentials(String username, String password, String environment, String devEmail)
-    {
-        System.out.println("Implementacion con 4 parametros, que es dev email");
-    }
-
-    /**
-     * Sets credentials.
-     *
-     * @param username    the username
-     * @param password    the password
-     * @param environment the environment
-     * @param connections the connections
-     */
-    public void setCredentials(String username, String password, String environment, int connections)
-    {
-        System.out.println("Implementacion con 4 parametros, con max connections");
-    }
-
-    private void authenticate(String username, String password){
-        System.out.println("::::Authenticating user::::");
-        System.out.println("Username:" + username);
-        System.out.println("Password:" + password);
-        System.out.println("::::USER AUTHENTICATED::::");
-    }
+    //  SE COMENTARON PARA EJEMPLIFICAR DE UNA MANERA MAS SIMPLE LA HERENCIA CON CLASES ABSTRACTAS.
+//    public void setCredentials(String username, String password)
+//    {
+//        this.authenticate(username, password);
+//    }
+//
+//    /**
+//     * Sets credentials.
+//     *
+//     * @param username    the username
+//     * @param password    the password
+//     * @param environment the environment
+//     */
+//    public void setCredentials(String username, String password, String environment)
+//    {
+//        System.out.println("Implementacion con 3 parametros");
+//    }
+//
+//    /**
+//     * Sets credentials.
+//     *
+//     * @param username    the username
+//     * @param password    the password
+//     * @param environment the environment
+//     * @param devEmail    the dev email
+//     */
+//    public void setCredentials(String username, String password, String environment, String devEmail)
+//    {
+//        System.out.println("Implementacion con 4 parametros, que es dev email");
+//    }
+//
+//    /**
+//     * Sets credentials.
+//     *
+//     * @param username    the username
+//     * @param password    the password
+//     * @param environment the environment
+//     * @param connections the connections
+//     */
+//    public void setCredentials(String username, String password, String environment, int connections)
+//    {
+//        System.out.println("Implementacion con 4 parametros, con max connections");
+//    }
 }
