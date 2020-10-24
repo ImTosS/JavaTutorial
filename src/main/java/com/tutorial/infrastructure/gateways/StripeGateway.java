@@ -20,7 +20,7 @@ public class StripeGateway extends PaymentGateway{
     }
 
     @Override
-    protected void afterSendingCredentials() {
-
+    protected String afterSendingCredentials(String username) {
+        return "Some String from Stripe for USERNAME::"+username;
     }
 }

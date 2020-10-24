@@ -20,7 +20,7 @@ public class OpenPayGateway extends PaymentGateway{
     }
 
     @Override
-    protected void afterSendingCredentials() {
-
+    protected String afterSendingCredentials(String username) {
+        return "Some String from OpenPay for USERNAME::"+username;
     }
 }

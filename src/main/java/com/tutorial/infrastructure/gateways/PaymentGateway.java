@@ -16,7 +16,8 @@ public abstract class PaymentGateway implements Chargeable {
         System.out.println("Username:" + username);
         System.out.println("Password:" + password);
 
-        this.afterSendingCredentials();
+        String response = this.afterSendingCredentials(username);
+        System.out.println(response);
 
         System.out.println("::::USER AUTHENTICATED::::");
         System.out.println(":::::USER ACCESS GRANTED::::For New User");
@@ -24,7 +25,7 @@ public abstract class PaymentGateway implements Chargeable {
         this.afterAuthenticating();
     }
 
-    abstract protected  void afterSendingCredentials();
+    abstract protected String afterSendingCredentials(String username);
 
     abstract protected void beforeAuthenticating();
 

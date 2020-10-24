@@ -23,9 +23,11 @@ public class PaypalGateway extends PaymentGateway{
     }
 
     @Override
-    protected void afterSendingCredentials() {
-
+    protected String afterSendingCredentials(String username) {
+        return "Some String from Paypal for USERNAME::"+username;
     }
+
+
 
     //  SE COMENTARON PARA EJEMPLIFICAR DE UNA MANERA MAS SIMPLE LA HERENCIA CON CLASES ABSTRACTAS.
 //    public void setCredentials(String username, String password)

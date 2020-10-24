@@ -25,7 +25,7 @@ class Main {
 
         PaymentGateway paymentGateway = new OpenPayGateway();
 
-        Credentials credentials = new Credentials("oscar","secure-password");
+        Credentials credentials = new Credentials("Antonio","secure-password");
         paymentGateway.setCredentials(credentials);
 
         ChargeService chargeService = new ChargeService();
