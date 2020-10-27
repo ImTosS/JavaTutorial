@@ -1,6 +1,7 @@
 package com.tutorial;
 
 import com.tutorial.application.charge.ChargeService;
+import com.tutorial.domain.exceptions.InvalidCredentialsException;
 import com.tutorial.domain.models.Credentials;
 import com.tutorial.infrastructure.gateways.*;
 import com.tutorial.infrastructure.notifications.EmailNotification;
@@ -25,10 +26,24 @@ class Main {
 
         PaymentGateway paymentGateway = new OpenPayGateway();
 
-        Credentials credentials = new Credentials("Antonio","secure-password");
-        paymentGateway.setCredentials(credentials);
+        Credentials credentials = new Credentials(" ", " ");
+
+        try{
+            paymentGateway.setCredentials(credentials);
+        }catch(InvalidCredentialsException invalidCredentialsException){
+            System.out.println(invalidCredentialsException.getMessage());
+        }
 
         ChargeService chargeService = new ChargeService();
         chargeService.charge(paymentGateway);
+
+
+        //TODO::ADD EXAMPLE FOR ABSTRACT CLASSES
+
+        //TODO::ADD EXAMPLE FOR INTERFACE CLASSES
+
+        //TODO::ADD EXAMPLE FOR INHERITANCE CLASSES
+
+
     }
 }

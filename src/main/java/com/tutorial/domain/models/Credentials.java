@@ -3,7 +3,7 @@ package com.tutorial.domain.models;
 /**
  * The type Credentials.
  */
-public class Credentials {
+final public class Credentials {
 
     private String username;
     private String password;

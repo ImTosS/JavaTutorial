@@ -17,6 +17,7 @@ public class PaypalGateway extends PaymentGateway{
         System.out.println("Ejecutando antes de autenticar al usuario en Paypal");
     }
 
+
     @Override
     protected void afterAuthenticating() {
 

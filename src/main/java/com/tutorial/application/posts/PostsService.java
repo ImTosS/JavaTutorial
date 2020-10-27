@@ -1,6 +1,6 @@
 package com.tutorial.application.posts;
 
-public class PostsService {
+public class PostsService extends UsersService{
 
     public void createPost(String title){
 
