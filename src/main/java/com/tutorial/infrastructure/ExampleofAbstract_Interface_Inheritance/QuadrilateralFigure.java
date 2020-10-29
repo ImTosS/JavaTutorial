@@ -23,7 +23,7 @@ public abstract class QuadrilateralFigure implements Paintable{
     }
 
     final public void infoFigure(){
-        paintFigure();
+        this.paintFigure();
         System.out.println("El perímetro es: " + this.perimeter(this.sideA, this.sideB, this.sideC, this.sideD) + " unidades.");
         System.out.println("El área es: " +this.calculateArea() + " unidades cuadradas.");
     }
