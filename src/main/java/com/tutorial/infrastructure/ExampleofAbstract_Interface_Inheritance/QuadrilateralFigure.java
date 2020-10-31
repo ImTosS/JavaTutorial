@@ -7,10 +7,8 @@ public abstract class QuadrilateralFigure implements Paintable{
     protected double sideC;
     protected double sideD;
 
-    public QuadrilateralFigure() {
-    }
 
-    public QuadrilateralFigure(double sideA, double sideB, double sideC, double sideD) {
+    protected QuadrilateralFigure(double sideA, double sideB, double sideC, double sideD) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;

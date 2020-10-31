@@ -2,9 +2,6 @@ package com.tutorial.infrastructure.ExampleofAbstract_Interface_Inheritance;
 
 public class Square extends QuadrilateralFigure{
 
-    public Square() {
-        super();
-    }
 
     public Square(double sideA, double sideB, double sideC, double sideD) {
         super(sideA, sideB, sideC, sideD);

@@ -2,9 +2,6 @@ package com.tutorial.infrastructure.ExampleofAbstract_Interface_Inheritance;
 
 public class Rectangle extends QuadrilateralFigure {
 
-    public Rectangle() {
-        super();
-    }
 
     public Rectangle(double sideA, double sideB, double sideC, double sideD) {
         super(sideA, sideB, sideC, sideD);
