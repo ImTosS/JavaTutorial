@@ -1,19 +1,28 @@
 package com.tutorial.infrastructure.ExampleofAbstract_Interface_Inheritance;
 
-public class Rectangle extends QuadrilateralFigure {
+public class Rectangle extends Figures {
 
+    private double base;
+    private double height;
 
-    public Rectangle(double sideA, double sideB, double sideC, double sideD) {
-        super(sideA, sideB, sideC, sideD);
+    public Rectangle(double base, double height, String colour ) {
+        this.base = base;
+        this.height = height;
+        super.colour = colour;
+    }
+
+    @Override
+    protected double calculatePerimeter() {
+        return (this.height * 2) + (this.base * 2);
     }
 
     @Override
     protected double calculateArea() {
-        return super.sideA * super.sideC;
+        return (this.base * this.height);
     }
 
     @Override
     public void paintFigure() {
-        System.out.println("Pintando un rectangulo");
+        System.out.println("Pintando un rectángulo de color " + super.colour);
     }
 }
