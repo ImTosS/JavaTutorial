@@ -41,7 +41,8 @@ class Main {
 
 
         // In case of rectangle figure, asume sideA and sideB are a pair of equals sides
-        Figures circle = new Circle(6,10, "verde");
+        Figures circle = new Rectangle(4,8);
+        circle.setColour("Blanco");
         circle.infoFigure();
 
         //Circle circle = new Circle(3,6);
