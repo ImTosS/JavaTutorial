@@ -1,6 +1,11 @@
 package com.tutorial;
 
 import com.tutorial.infrastructure.ExampleofAbstract_Interface_Inheritance.*;
+import com.tutorial.infrastructure.gateways.*;
+import com.tutorial.domain.models.*;
+import com.tutorial.domain.exceptions.*;
+import com.tutorial.application.charge.*;
+
 
 class Main {
 
@@ -44,6 +49,7 @@ class Main {
         Figures circle = new Rectangle(4,8);
         circle.setColour("Blanco");
         circle.infoFigure();
+        circle.print();
 
         //Circle circle = new Circle(3,6);
         //circle.infoCircle();
