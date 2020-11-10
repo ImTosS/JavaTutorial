@@ -5,13 +5,10 @@ import static java.lang.Math.*;
 public class Circle extends Figures{
 
     private double radius;
-    private double diameter;
     private static double pi = 3.14159;
 
-    public Circle(double radius, double diameter, String colour) {
+    public Circle(double radius) {
         this.radius = radius;
-        this.diameter = diameter;
-        super.colour = colour;
     }
 
     @Override
@@ -21,11 +18,11 @@ public class Circle extends Figures{
 
     @Override
     protected double calculatePerimeter() {
-        return this.pi * this.diameter;
+        return this.pi * (this.radius * 2);
     }
 
     @Override
-    public void paintFigure() {
-        System.out.println("Pintando un círculo de color " + super.colour);
+    public void print() {
+        System.out.println("Pintando un círculo de color " + super.getColour());
     }
 }

@@ -4,9 +4,8 @@ public class Square extends Figures {
 
     private double side;
 
-    public Square(double side, String colour) {
+    public Square(double side) {
         this.side = side;
-        super.colour = colour;
     }
 
     @Override
@@ -18,7 +17,8 @@ public class Square extends Figures {
     protected double calculateArea() { return Math.pow(this.side, 2); }
 
     @Override
-    public void paintFigure() {
-        System.out.println("Pintando un Cuadrado de color " + super.colour);
+    public void print() {
+        System.out.println("Pintando un Cuadrado de color " + super.getColour());
     }
+
 }

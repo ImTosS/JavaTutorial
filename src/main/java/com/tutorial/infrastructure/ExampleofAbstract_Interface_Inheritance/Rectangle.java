@@ -5,10 +5,9 @@ public class Rectangle extends Figures {
     private double base;
     private double height;
 
-    public Rectangle(double base, double height, String colour ) {
+    public Rectangle(double base, double height) {
         this.base = base;
         this.height = height;
-        super.colour = colour;
     }
 
     @Override
@@ -22,7 +21,7 @@ public class Rectangle extends Figures {
     }
 
     @Override
-    public void paintFigure() {
-        System.out.println("Pintando un rectángulo de color " + super.colour);
+    public void print() {
+        System.out.println("Pintando un rectángulo de color " + super.getColour());
     }
 }
