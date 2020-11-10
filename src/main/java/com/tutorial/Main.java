@@ -39,10 +39,14 @@ class Main {
         //TODO::ADD EXAMPLE FOR INTERFACE CLASSES
         //TODO::ADD EXAMPLE FOR INHERITANCE CLASSES
 
-        // We have two Quadrilateral figures: rectangle and square.
+
         // In case of rectangle figure, asume sideA and sideB are a pair of equals sides
-        QuadrilateralFigure square = new Square(4,4,4,4);
-        square.infoFigure();
+        Figures circle = new Rectangle(4,8);
+        circle.setColour("Blanco");
+        circle.infoFigure();
+
+        //Circle circle = new Circle(3,6);
+        //circle.infoCircle();
 
     }
 }
