@@ -44,9 +44,10 @@ class Main {
         //TODO::ADD EXAMPLE FOR INTERFACE CLASSES
         //TODO::ADD EXAMPLE FOR INHERITANCE CLASSES
 
-
+        Rectangle.printSomething();
         // In case of rectangle figure, asume sideA and sideB are a pair of equals sides
-        Figures circle = new Rectangle(4,8);
+        Rectangle circle = new Rectangle(4,8);
+
         circle.setColour("Blanco");
         circle.infoFigure();
 
